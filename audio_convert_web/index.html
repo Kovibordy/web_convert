@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудио в Текст</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Конвертация аудио в текст</h1>
+    </header>
+
+    <div class="ads left">
+        <!-- Место для рекламы -->
+    </div>
+
+    <div class="ads right">
+        <!-- Место для рекламы -->
+    </div>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="upload-container">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <label for="audioFile">Загрузите аудиофайл (поддерживаемые форматы: .mp3; .PRO; .aac; .wav; .wma; .ogg; .m4a):</label>
+                    <input type="file" id="audioFile" name="audioFile" accept=".mp3, .wav" required>
+
+                    <div class="format-options">
+                        <label><input type="checkbox" name="format" value="docs"> DOCS</label>
+                        <label><input type="checkbox" name="format" value="txt"> TXT</label>
+                    </div>
+
+                    <button type="submit">Загрузить</button>
+                    <progress id="uploadProgress" value="0" max="100"></progress>
+                </form>
+            </div>
+
+            <div class="result-container">
+                <button id="openEditor">Скачать</button>
+            </div>
+
+            <div class="preview-container">
+                <h2>Предварительный просмотр</h2>
+                <textarea id="previewText" readonly></textarea>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
